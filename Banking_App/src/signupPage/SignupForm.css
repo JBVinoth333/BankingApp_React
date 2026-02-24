@@ -1,30 +1,66 @@
+#signup-page{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    height: 100%;
+}
+
 header{
-    font-size: 1.5rem;
-    font-weight: 600;
+    height: 7%;
     background-color: #ffffff;
     width: 100%;
     display: flex;
+    padding: 0 2rem 0 1rem;
     justify-content: space-between;
-
+    border-bottom: 1px solid #dcdcdc;
 }
 
-.logo{
+.logo-div{
     display: flex;
-    gap: 0.5rem;
+    gap: 1rem;
     align-items: center;
+}
+
+.logo-div a{
+    text-decoration: none;
+}
+
+.bank-name{
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #2c5680; 
+}
+.logo{
+    font-size: 3rem;
+    font-weight: 1000;
+    color: #003366;
 }
 
 .login-link{
     display: flex;
-    gap: 0.5rem;
+    gap: .5rem;
     align-items: center;
+}
+
+.login-link div{
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    color: #79818e;
+}
+
+.login-link a{
+    text-decoration: none;
+    color: #2c5680;
+    font-size: 1.1rem;
+    font-weight: 600;    
 }
 
 #signup-form{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background-color: #f5f7f8;
+    /* background-color: #f5f7f8; */
     border: 1px solid black;
     padding: 2rem;
     border-radius: 1rem;

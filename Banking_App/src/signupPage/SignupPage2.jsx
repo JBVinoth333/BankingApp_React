@@ -1,10 +1,10 @@
-import Form from "./Form";
+import Form from "./Form2";
 import Header from "./Header";
 import "./SignupForm.css";
 
-export default function SignupPage() {
+export default function SignupPage2() {
     return (
-        <div className="signup-page">
+        <div id="signup-page">
             <Header />
             <Form />
         </div>
