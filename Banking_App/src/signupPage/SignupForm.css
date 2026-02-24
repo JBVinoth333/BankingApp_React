@@ -1,12 +1,13 @@
-#signup-page{
+#signup-page {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    align-items: center;
+    gap: 4rem;
     width: 100%;
     height: 100%;
 }
 
-header{
+header {
     height: 7%;
     background-color: #ffffff;
     width: 100%;
@@ -16,59 +17,94 @@ header{
     border-bottom: 1px solid #dcdcdc;
 }
 
-.logo-div{
+.logo-div {
     display: flex;
     gap: 1rem;
     align-items: center;
 }
 
-.logo-div a{
+.logo-div a {
     text-decoration: none;
 }
 
-.bank-name{
+.bank-name {
     font-size: 1.5rem;
-    font-weight: 800;
-    color: #2c5680; 
+    color: #2c5680;
 }
-.logo{
+
+.logo {
     font-size: 3rem;
     font-weight: 1000;
     color: #003366;
 }
 
-.login-link{
+.login-link {
     display: flex;
     gap: .5rem;
     align-items: center;
 }
 
-.login-link div{
+.login-link div {
     font-size: 1.1rem;
     letter-spacing: 1px;
     color: #79818e;
 }
 
-.login-link a{
+.login-link a {
     text-decoration: none;
     color: #2c5680;
     font-size: 1.1rem;
-    font-weight: 600;    
 }
 
-#signup-form{
+#signup-form {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    /* background-color: #f5f7f8; */
     border: 1px solid black;
     padding: 2rem;
     border-radius: 1rem;
-    gap : 1rem;
-        max-width: 50rem;
+    gap: 1rem;
+    width: 100%;
+    border: none;
+    height: 80%;
+
 }
 
-#signup-container{
+#signup-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    width: 35rem;
+    height: 86%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: none;
+    border-radius: .5rem;
+}
+
+#footer{
+    height: 7%;
+    background-color: #ffffff;
+    width: 100%;
+    display: flex;
+    padding: 0 2rem 0 1rem;
+    justify-content:  center;
+    align-items: center;
+    flex-direction: column;
+    border-top: 1px solid #dcdcdc;
+    font-size: .8rem;
+    color: #79818e;
+    letter-spacing: .5px;
+}
+
+.footer-text{
+    display: flex;
+    gap: 0.4rem;
+}
+
+#form-header{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    align-items: center;
 }
