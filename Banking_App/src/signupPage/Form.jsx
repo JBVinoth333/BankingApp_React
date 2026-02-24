@@ -6,7 +6,7 @@ import "./SignupForm.css";
 export default function Form() {
     function createAccount() {
         console.log("Button Clicked");
-        fetch("http://localhost:8090/BankingApplication_V3/Signup", {
+        fetch("http://localhost:8080/BankingApplication_V3/Signup", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -33,13 +33,13 @@ export default function Form() {
     }
     return (
         <div id="signup-container">
-            <form action="" id="signup-form">
+            <form id="signup-form">
                 <div id="signup_box">
                     <Input id="name" label="Name:" type="text" isRequired={true} />
                     <Input id="aadhaar" label="Aadhaar Number:" type="text" isRequired={true} />
                     <Input id="yob" label="Year of Birth:" type="number" isRequired={true} />
                     <Input id="mobile" label="Mobile Number:" type="number" isRequired={true} />
-                    <Input id="email" label="Email Address:" type="password" isRequired={true} />
+                    <Input id="email" label="Email Address:" type="email" isRequired={true} />
                     <Textarea id="address" label="Address:" isRequired={true} />
                     <Input id="balance" label="Opening Balance:" type="number" isRequired={true} />
                     <Input id="login" label="6 Digit Login Number:" type="password" isRequired={true} maxLength="6" />
