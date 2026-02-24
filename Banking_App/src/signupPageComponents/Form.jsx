@@ -1,11 +1,12 @@
 import Input from "../common/Input";
 import Textarea from "../common/TextArea";
 import Button from "../common/Button";
+import "./SignupForm.css";
 
 export default function Form() {
-        function createAccount(){
+    function createAccount() {
         console.log("Button Clicked");
-        fetch("http://localhost:8080/BankingApplication/SignupServlet", {
+        fetch("http://localhost:8090/BankingApplication_V3/Signup", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -22,29 +23,31 @@ export default function Form() {
                 confirm: document.getElementById("confirm").value
             })
         }).then(response => response.json())
-        .then(data => {
-            console.log(data);
-            alert("Account Created Successfully!");
-        }).catch(error => {
-            console.error(error);
-            alert("Error creating account. Please try again.");
-        });
+            .then(data => {
+                console.log(data);
+                console.log("Account Created Successfully!");
+            }).catch(error => {
+                console.error(error);
+                console.log("Error creating account. Please try again.");
+            });
     }
     return (
-        <form action="" id="signup_form">
-            <div id="signup_box">
-                <Input id="name" label="Name:" type="text" isRequired={true}/>
-                <Input id="aadhaar" label="Aadhaar Number:" type="text" isRequired={true}/>
-                <Input id="yob" label="Year of Birth:" type="number" isRequired={true}/>
-                <Input id="mobile" label="Mobile Number:" type="number" isRequired={true}/>
-                <Input id="email" label="Email Address:" type="password" isRequired={true}/>
-                <Textarea id="address" label="Address:" isRequired={true}/>
-                <Input id="balance" label="Opening Balance:" type="number" isRequired={true}/>
-                <Input id="login" label="6 Digit Login Number:" type="password" isRequired={true} maxLength="6"/>
-                <Input id="confirm" label="Confirm Login Number:" type="password" isRequired={true} maxLength="6"/>
-                <Button id="btn_createAccount" text="Submit" type="submit" onClick={createAccount}/>
-            </div>
-        </form>
+        <div id="signup-container">
+            <form action="" id="signup-form">
+                <div id="signup_box">
+                    <Input id="name" label="Name:" type="text" isRequired={true} />
+                    <Input id="aadhaar" label="Aadhaar Number:" type="text" isRequired={true} />
+                    <Input id="yob" label="Year of Birth:" type="number" isRequired={true} />
+                    <Input id="mobile" label="Mobile Number:" type="number" isRequired={true} />
+                    <Input id="email" label="Email Address:" type="password" isRequired={true} />
+                    <Textarea id="address" label="Address:" isRequired={true} />
+                    <Input id="balance" label="Opening Balance:" type="number" isRequired={true} />
+                    <Input id="login" label="6 Digit Login Number:" type="password" isRequired={true} maxLength="6" />
+                    <Input id="confirm" label="Confirm Login Number:" type="password" isRequired={true} maxLength="6" />
+                    <Button id="btn_createAccount" text="Submit" type="submit" onClick={createAccount} />
+                </div>
+            </form>
+        </div>
     );
 }
 

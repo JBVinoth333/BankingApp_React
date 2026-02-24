@@ -1,0 +1,38 @@
+header{
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: #ffffff;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.logo{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.login-link{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+#signup-form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f5f7f8;
+    border: 1px solid black;
+    padding: 2rem;
+    border-radius: 1rem;
+    gap : 1rem;
+        max-width: 50rem;
+}
+
+#signup-container{
+    display: flex;
+    justify-content: center;
+}
