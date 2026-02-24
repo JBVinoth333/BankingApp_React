@@ -5,18 +5,32 @@
     color: #000000;
         font-size: 1rem;
 }
-input,
-textarea {
+.input-group input,
+.input-group textarea {
     border-radius: .5rem;
-    padding: 1rem;
+    padding: .7rem;
     border: none;
     outline: none;
-    width: 20rem;
+    width: 30rem;
     background-color: #F3F3F5;
     font-size: 1rem;
+    border-radius: .5rem;
+    text-indent: 10px;
 }
 
-input:focus,
+.input-group input:focus,
 textarea:focus {
     box-shadow: 0 0 2px 3px  #79818e;
+}
+
+button {
+    padding: 1rem 3rem;
+    border: none;
+    width:30rem;
+    outline: none;
+    background-color: #1C398E;
+    color: #FFFFFF;
+    font-size: 1rem;
+    border-radius: .5rem;
+    cursor: pointer;
 }

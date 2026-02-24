@@ -1,6 +1,7 @@
 import Input from "../common/Input";
 import Textarea from "../common/TextArea";
 import Button from "../common/Button";
+import Terms from "./Terms";
 import "./SignupForm.css";
 
 export default function Form1(props) {
@@ -20,6 +21,7 @@ export default function Form1(props) {
                 <Input id="yob" label="Year of Birth:" placeholder="2007" type="number" isRequired={true} value={props.state.yob} onChange={(e) => props.state.setYob(e.target.value)} />
                 <Input id="mobile" label="Mobile Number:" placeholder="+91 89252 34723" type="number" isRequired={true} value={props.state.mobile} onChange={(e) => props.state.setMobile(e.target.value)} />
                 <Textarea id="address" label="Address:" placeholder="461, Church Street, City, State, Country" isRequired={true} value={props.state.address} onChange={(e) => props.state.setAddress(e.target.value)} />
+                <Terms/>
                 <Button id="btn_continue" text="Continue to Security Setup" type="button" onClick={securitySignup}></Button>
             </form>
     );

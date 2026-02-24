@@ -15,8 +15,8 @@ export default function FormHeader({bankName}) {
                     <div className="form-2"></div>
                 </div>
             </div>
-            <div>
-                <div>Join {bankName}</div>
+            <div id="title-div">
+                <div className="form-title rubik-medium">Join {bankName}</div>
                 <div>Experience bank-grade security for your digital assets.</div>
             </div>
         </div>
