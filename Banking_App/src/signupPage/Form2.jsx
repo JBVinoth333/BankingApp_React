@@ -1,5 +1,4 @@
 import Input from "../common/Input";
-import Textarea from "../common/TextArea";
 import Button from "../common/Button";
 import "./SignupForm.css";
 
@@ -34,21 +33,21 @@ export default function Form(props) {
         }).then(response => response.json())
             .then(data => {
                 console.log(data);
-                console.log("Account Created Successfully!");
+                // data.status == 200 ? window.location.href = "/login" : console.log(data.message);
+                // console.log("Account Created Successfully!");
+                // props.state.setName("");
+                // props.state.setAadhaar("");
+                // props.state.setYob("");
+                // props.state.setMobile("");
+                // props.state.setEmail("");
+                // props.state.setAddress("");
+                // props.state.setBalance("");
+                // props.state.setLogin("");
+                // props.state.setConfirm("");
             }).catch(error => {
                 console.error(error);
-                console.log("Error creating account. Please try again.");
+                console.log("Error while creating account.");
             });
-
-        props.state.setName("");
-        props.state.setAadhaar("");
-        props.state.setYob("");
-        props.state.setMobile("");
-        props.state.setEmail("");
-        props.state.setAddress("");
-        props.state.setBalance("");
-        props.state.setLogin("");
-        props.state.setConfirm("");
     }
 
     function backToForm1() {
@@ -59,17 +58,17 @@ export default function Form(props) {
         document.getElementById("address").value = props.state.address;
     }
     return (
-        <form id="signup-form">
+        <>
             <Input id="aadhaar" label="Aadhaar Number:" placeholder="1234 5678 9012" type="text" isRequired={true} value={props.state.aadhaar} onChange={(e) => props.state.setAadhaar(e.target.value)} />
             <Input id="email" label="Email Address:" placeholder="vinoth@example.com" type="email" isRequired={true} value={props.state.email} onChange={(e) => props.state.setEmail(e.target.value)} />
             <Input id="balance" label="Opening Balance:" placeholder="1000" type="number" isRequired={true} value={props.state.balance} onChange={(e) => props.state.setBalance(e.target.value)} />
             <Input id="login" label="6 Digit Login Number:" placeholder="123456" type="password" isRequired={true} maxLength="6" value={props.state.login} onChange={(e) => props.state.setLogin(e.target.value)} />
             <Input id="confirm" label="Confirm Login Number:" placeholder="123456" type="password" isRequired={true} maxLength="6" value={props.state.confirm} onChange={(e) => props.state.setConfirm(e.target.value)} />
-            <div>
+            <div id="btns-signup-form">
                 <Button id="btn-back" text="Back" type="button" onClick={backToForm1}></Button>
                 <Button id="btn-createAccount" text="Submit" type="submit" onClick={createAccount} />
             </div>
-        </form>
+        </>
     );
 }
 

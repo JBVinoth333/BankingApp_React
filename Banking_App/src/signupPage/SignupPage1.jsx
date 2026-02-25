@@ -23,7 +23,9 @@ export default function SignupPage1() {
             <Header bankName={bankName} />
             <div id="signup-container">
                 <FormHeader bankName={bankName} />
-                {showForm1 ? <Form1 state={{ showForm1, setShowForm1, name, setName, yob, setYob, mobile, setMobile, address, setAddress, aadhaar, setAadhaar, email, setEmail, balance, setBalance, login, setLogin, confirm, setConfirm }} /> : <Form2 state={{ showForm1, setShowForm1, name, setName, yob, setYob, mobile, setMobile, address, setAddress, aadhaar, setAadhaar, email, setEmail, balance, setBalance, login, setLogin, confirm, setConfirm }} />}
+                <div id="signup-form">
+                    {showForm1 ? <Form1 state={{ showForm1, setShowForm1, name, setName, yob, setYob, mobile, setMobile, address, setAddress, aadhaar, setAadhaar, email, setEmail, balance, setBalance, login, setLogin, confirm, setConfirm }} /> : <Form2 state={{ showForm1, setShowForm1, name, setName, yob, setYob, mobile, setMobile, address, setAddress, aadhaar, setAadhaar, email, setEmail, balance, setBalance, login, setLogin, confirm, setConfirm }} />}
+                </div>
             </div>
             <Footer bankName={bankName} />
         </div>
